@@ -2,39 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* AC Services Design System - Modern, Clean, Professional */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 25% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 27%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Cool Blue Primary Colors */
+    --primary: 195 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 195 100% 85%;
+    --primary-dark: 195 100% 35%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Soft Secondary Colors */
+    --secondary: 200 20% 96%;
+    --secondary-foreground: 215 25% 27%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 200 20% 96%;
+    --muted-foreground: 215 15% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 195 100% 95%;
+    --accent-foreground: 195 100% 35%;
+
+    /* Fresh Gradient Colors */
+    --gradient-cool: linear-gradient(135deg, hsl(195 100% 50%), hsl(200 100% 60%));
+    --gradient-fresh: linear-gradient(135deg, hsl(195 100% 95%), hsl(200 100% 90%));
+    --gradient-hero: linear-gradient(135deg, hsl(195 100% 50% / 0.9), hsl(200 100% 60% / 0.8));
+
+    /* Professional Shadows */
+    --shadow-soft: 0 4px 20px hsl(195 100% 50% / 0.1);
+    --shadow-cool: 0 8px 30px hsl(195 100% 50% / 0.15);
+    --shadow-elegant: 0 12px 40px hsl(195 100% 50% / 0.2);
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 200 20% 90%;
+    --input: 200 20% 90%;
+    --ring: 195 100% 50%;
 
     --radius: 0.5rem;
 
@@ -100,6 +112,95 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Custom gradient utilities */
+  .bg-gradient-cool {
+    background: var(--gradient-cool);
+  }
+  
+  .bg-gradient-fresh {
+    background: var(--gradient-fresh);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  /* Shadow utilities */
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-cool {
+    box-shadow: var(--shadow-cool);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Animation utilities */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+}
+
+@layer components {
+  /* Hero section styling */
+  .hero-section {
+    @apply relative min-h-screen flex items-center justify-center overflow-hidden;
+  }
+  
+  .hero-background {
+    @apply absolute inset-0 z-0;
+    background: linear-gradient(135deg, 
+      hsl(195 100% 50% / 0.95) 0%, 
+      hsl(200 100% 60% / 0.9) 50%,
+      hsl(210 100% 70% / 0.85) 100%);
+  }
+}
+
+/* Keyframes for animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
