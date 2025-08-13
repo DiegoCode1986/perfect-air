@@ -14,10 +14,10 @@ const WhatsAppFloat = () => {
       <Button
         onClick={handleWhatsAppClick}
         size="lg"
-        className="rounded-full w-14 h-14 bg-green-500 hover:bg-green-600 text-white shadow-elegant hover:shadow-cool transition-all duration-300 group"
+        className="rounded-full w-14 h-14 bg-green-500 hover:bg-green-600 active:bg-green-700 active:scale-95 text-white shadow-elegant hover:shadow-cool transition-all duration-200 group"
         aria-label="Falar no WhatsApp"
       >
-        <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
+        <MessageCircle className="w-6 h-6 group-hover:scale-110 group-active:scale-90 transition-transform duration-200" />
       </Button>
       
       {/* Pulse animation */}
