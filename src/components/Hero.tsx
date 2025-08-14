@@ -3,8 +3,11 @@ import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import heroImage from "@/assets/hero-comfort.jpg";
 
 const Hero = () => {
+  const phoneNumber = "5511999999999";
+  const message = "Olá! Gostaria de solicitar um orçamento para serviços de ar-condicionado.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   return (
-    <section id="inicio" className="hero-section">
+    <section id="inicio" className="hero-section pt-32 sm:pt-40">
       <div className="hero-background"></div>
       
       {/* Content */}
@@ -38,13 +41,15 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-white text-primary hover:bg-white/90 shadow-elegant group"
+              <a 
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-3 text-lg font-medium bg-white text-primary hover:bg-white/90 shadow-elegant group rounded-md transition-colors"
               >
                 Solicitar Orçamento
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              </a>
               <Button 
                 variant="outline" 
                 size="lg"

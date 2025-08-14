@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const phoneNumber = "5511999999999";
+  const message = "Olá! Gostaria de solicitar um orçamento para serviços de ar-condicionado.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   const menuItems = [
     { label: "Início", href: "#inicio" },
@@ -43,9 +45,9 @@ const Header = () => {
               <Phone className="w-4 h-4" />
               <span>(11) 9999-9999</span>
             </div>
-            <Button variant="default" size="sm" className="shadow-cool">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-9 px-4 py-2 rounded-md text-sm font-medium text-primary-foreground bg-primary hover:bg-primary/90 shadow-cool transition-colors">
               Orçamento Grátis
-            </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -80,9 +82,9 @@ const Header = () => {
                   <Phone className="w-4 h-4" />
                   <span>(11) 9999-9999</span>
                 </div>
-                <Button variant="default" size="sm" className="w-full shadow-cool">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-10 px-4 py-2 w-full rounded-md text-sm font-medium text-primary-foreground bg-primary hover:bg-primary/90 shadow-cool transition-colors">
                   Orçamento Grátis
-                </Button>
+                </a>
               </div>
             </nav>
           </div>

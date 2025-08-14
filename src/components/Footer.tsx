@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
+  const phoneNumber = "5511999999999";
+  const message = "Olá! Gostaria de solicitar um orçamento para serviços de ar-condicionado.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
@@ -105,9 +108,9 @@ const Footer = () => {
             </div>
             
             <div className="mt-6">
-              <Button variant="default" size="sm" className="w-full shadow-cool">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-9 px-4 py-2 w-full shadow-cool rounded-md text-sm font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-colors">
                 Solicitar Orçamento
-              </Button>
+              </a>
             </div>
           </div>
         </div>

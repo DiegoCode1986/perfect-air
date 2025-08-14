@@ -7,10 +7,14 @@ import supportImage from "@/assets/service-support.jpg";
 import efficiencyImage from "@/assets/service-efficiency.jpg";
 
 const Services = () => {
+  const phoneNumber = "5511999999999";
+  const message = "Olá! Gostaria de solicitar um orçamento para serviços de ar-condicionado.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  
   const services = [
     {
       icon: Settings,
-      image: installationImage,
+      image: "/instalacao.jpg",
       title: "Instalação",
       description: "Instalação profissional de sistemas de ar-condicionado para todos os tipos de ambiente",
       features: [
@@ -22,7 +26,7 @@ const Services = () => {
     },
     {
       icon: Wrench,
-      image: maintenanceImage,
+      image: "/Capturar.PNG",
       title: "Manutenção",
       description: "Serviços preventivos e corretivos para manter seu equipamento sempre funcionando",
       features: [
@@ -34,7 +38,7 @@ const Services = () => {
     },
     {
       icon: Headphones,
-      image: supportImage,
+      image: "/suporte.jpg",
       title: "Suporte 24/7",
       description: "Atendimento especializado sempre que você precisar, em emergências ou dúvidas",
       features: [
@@ -46,7 +50,7 @@ const Services = () => {
     },
     {
       icon: Leaf,
-      image: efficiencyImage,
+      image: "/sustentavel.jpg",
       title: "Eficiência Energética",
       description: "Soluções sustentáveis que reduzem o consumo de energia e preservam o meio ambiente",
       features: [
@@ -85,7 +89,7 @@ const Services = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-20 h-20 mx-auto rounded-2xl shadow-soft group-hover:shadow-cool transition-all duration-300"
+                    className="w-60 h-40 mx-auto rounded-2xl shadow-soft group-hover:shadow-cool transition-all duration-300"
                   />
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-cool rounded-full flex items-center justify-center shadow-soft">
                     <service.icon className="w-4 h-4 text-white" />
@@ -130,14 +134,14 @@ const Services = () => {
               Entre em contato conosco e receba uma avaliação gratuita para seu projeto.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="shadow-cool">
-                Solicitar Orçamento Grátis
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Falar com Especialista
-              </Button>
-            </div>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-11 px-8 rounded-md text-white bg-primary hover:bg-primary/90 shadow-cool font-medium transition-colors">
+                  Solicitar Orçamento Grátis
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </a>
+                <Button variant="outline" size="lg">
+                  Falar com Especialista
+                </Button>
+              </div>
           </div>
         </div>
       </div>

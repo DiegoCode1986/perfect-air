@@ -61,7 +61,7 @@ const About = () => {
 
           {/* Right Stats */}
           <div className="animate-scale-in">
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {stats.map((stat, index) => (
                 <Card 
                   key={stat.label} 
@@ -94,7 +94,7 @@ const About = () => {
               </p>
               
               {/* Brand Logos Placeholder */}
-              <div className="flex justify-center items-center space-x-8 opacity-60">
+              <div className="flex justify-around items-center gap-6 flex-wrap opacity-60">
                 <div className="w-20 h-12 bg-muted rounded-lg flex items-center justify-center">
                   <span className="text-xs font-semibold">CARRIER</span>
                 </div>
