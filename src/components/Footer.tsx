@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
-  const phoneNumber = "5511999999999";
+  const phoneNumber = "5561981218649";
   const message = "Olá! Gostaria de solicitar um orçamento para serviços de ar-condicionado.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   const currentYear = new Date().getFullYear();
@@ -24,9 +24,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Facebook, href: "https://www.facebook.com/perfectairdf/", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/perfectairdf/", label: "Instagram" },
+    
   ];
 
   return (
@@ -37,13 +37,16 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-cool rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">AC</span>
+              <div className="w-30 h-10 bg-gradient-cool rounded-lg flex items-center justify-center">
+              <div className="flex items-center space-x-6">
+            <img src="/logologo.png" alt="Logo" className="h-8 w-15" />
+           
+          </div>
               </div>
-              <span className="text-2xl font-bold">Fresh</span>
+              
             </div>
             <p className="text-white/80 mb-6 leading-relaxed">
-              Especialistas em climatização com mais de 15 anos de experiência. 
+              Especialistas em climatização com mais de 8 anos de experiência. 
               Seu conforto é nossa prioridade.
             </p>
             <div className="flex space-x-4">
@@ -95,15 +98,15 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-white/80">(11) 9999-9999</span>
+                <span className="text-white/80">(61) 98121-8649</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-white/80">contato@acfresh.com.br</span>
+                <span className="text-white/80">atendimento@perfectair.com.br</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-white/80">São Paulo, SP</span>
+                <span className="text-white/80">Taguatinga,DF</span>
               </div>
             </div>
             
@@ -121,7 +124,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/60">
             <p>
-              © {currentYear} AC Fresh. Todos os direitos reservados.
+              © {currentYear} PERFECT-AIR. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-primary transition-colors">

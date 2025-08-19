@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 
 const WhatsAppFloat = () => {
-  const phoneNumber = "5511999999999";
+  const phoneNumber = "5561981218649";
   const message = "Olá! Gostaria de solicitar um orçamento para serviços de ar-condicionado.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

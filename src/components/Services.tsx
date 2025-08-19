@@ -8,7 +8,7 @@ import efficiencyImage from "@/assets/service-efficiency.jpg";
 
 const Services = () => {
   const phoneNumber = "5511999999999";
-  const message = "Olá! Gostaria de solicitar um orçamento para serviços de ar-condicionado.";
+  const message = "Olá! Gostaria de solicitar um orçamento para serviços de perfect-air.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   
   const services = [
@@ -18,21 +18,24 @@ const Services = () => {
       title: "Instalação",
       description: "Instalação profissional de sistemas de ar-condicionado para todos os tipos de ambiente",
       features: [
-        "Avaliação técnica completa",
-        "Instalação certificada",
-        "Teste de funcionamento",
-        "Garantia de 2 anos"
+        "Ar condicionado",
+        "Piso-teto",
+        "Multisplit",
+        "Dimensionamento",
+        "Sistemas de refrigeração",
+        "Cassete"
       ]
     },
     {
       icon: Wrench,
       image: "/Capturar.PNG",
-      title: "Manutenção",
+      title: "Manutenção Corretiva e Preventiva",
       description: "Serviços preventivos e corretivos para manter seu equipamento sempre funcionando",
       features: [
         "Limpeza completa",
         "Verificação de gás",
         "Troca de filtros",
+        "Soluções para defeitos em máquinas convencionais e inverter",
         "Relatório técnico"
       ]
     },
@@ -51,12 +54,12 @@ const Services = () => {
     {
       icon: Leaf,
       image: "/sustentavel.jpg",
-      title: "Eficiência Energética",
+      title: "Planejamento",
       description: "Soluções sustentáveis que reduzem o consumo de energia e preservam o meio ambiente",
       features: [
-        "Equipamentos A+++",
-        "Economia até 60%",
-        "Tecnologia inverter",
+        "Plano de Manutenção",
+        " Operação e Controle (PMOC)",
+        " Elaboração de projeto de infraestrutura para climatização. ",
         "Consultoria energética"
       ]
     }
@@ -111,14 +114,7 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="w-full group-hover:bg-primary group-hover:text-white group-hover:border-primary"
-                >
-                  Saiba Mais
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+               
               </CardContent>
             </Card>
           ))}

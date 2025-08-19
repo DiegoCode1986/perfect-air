@@ -4,10 +4,10 @@ import { CheckCircle, Award, Users, Clock, ArrowRight } from "lucide-react";
 
 const About = () => {
   const stats = [
-    { icon: Users, number: "5000+", label: "Clientes Satisfeitos" },
-    { icon: Award, number: "15+", label: "Anos de Experiência" },
-    { icon: CheckCircle, number: "100%", label: "Garantia de Qualidade" },
-    { icon: Clock, number: "24/7", label: "Suporte Disponível" },
+    { icon: Users, number: "706", label: "Instalações" },
+    { icon: Award, number: "1532", label: "Manutenções preventivas" },
+    { icon: CheckCircle, number: "833", label: "Manutenções Corretivas" },
+    { icon: Clock, number: "99 %", label: "Feedback Positivo" },
   ];
 
   const benefits = [
@@ -29,9 +29,9 @@ const About = () => {
               Sobre Nossa <span className="text-primary">Empresa</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Somos especialistas em climatização com mais de 15 anos de experiência no mercado. 
-              Nossa missão é proporcionar conforto térmico ideal para residências e empresas, 
-              utilizando as melhores tecnologias e práticas sustentáveis.
+            Inspirados em promover conforto térmico, há 8 anos atendemos com excelência o
+             público do Distrito Federal e entorno levando soluções em projetos,
+             instalações e manutenção de equipamentos de ar condicionado.
             </p>
 
             {/* Benefits List */}

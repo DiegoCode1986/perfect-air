@@ -7,20 +7,20 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefone",
-      info: "(11) 9999-9999",
+      info: "(61) 98121-8649",
       description: "Atendimento 24 horas"
     },
     {
       icon: Mail,
       title: "Email",
-      info: "contato@acfresh.com.br",
+      info: "atendimento@perfectair.com.br",
       description: "Resposta em até 2 horas"
     },
     {
       icon: MapPin,
       title: "Endereço",
-      info: "São Paulo, SP",
-      description: "Atendemos toda a região metropolitana"
+      info: "Taguatinga, DF",
+      description: "Atendemos toda a Brasília e Entorno"
     },
     {
       icon: Clock,
@@ -45,7 +45,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Information - Centered */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4x2 mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 animate-scale-in">
             {contactInfo.map((item, index) => (
               <Card 
@@ -86,7 +86,7 @@ const Contact = () => {
                   className="bg-white text-primary hover:bg-white/90"
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Ligar Agora: (11) 9999-9999
+                  Ligar Agora: (61) 98121-8649
                 </Button>
               </CardContent>
             </Card>

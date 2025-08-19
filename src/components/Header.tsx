@@ -3,7 +3,7 @@ import { Menu, X, Phone, Mail } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const phoneNumber = "5511999999999";
+  const phoneNumber = "5561981218649";
   const message = "Olá! Gostaria de solicitar um orçamento para serviços de ar-condicionado.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -20,10 +20,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-cool rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">AC</span>
-            </div>
-            <span className="text-xl font-semibold text-foreground">Fresh</span>
+            <img src="/logologo.png" alt="Logo" className="h-8 w-auto" />
+           
           </div>
 
           {/* Desktop Navigation */}
@@ -43,7 +41,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="w-4 h-4" />
-              <span>(11) 9999-9999</span>
+              <span>(61) 98121-8649</span>
             </div>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-9 px-4 py-2 rounded-md text-sm font-medium text-primary-foreground bg-primary hover:bg-primary/90 shadow-cool transition-colors">
               Orçamento Grátis
@@ -80,7 +78,7 @@ const Header = () => {
               <div className="flex flex-col space-y-3 pt-4 border-t border-border">
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                   <Phone className="w-4 h-4" />
-                  <span>(11) 9999-9999</span>
+                  <span>(61) 98121-8649</span>
                 </div>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-10 px-4 py-2 w-full rounded-md text-sm font-medium text-primary-foreground bg-primary hover:bg-primary/90 shadow-cool transition-colors">
                   Orçamento Grátis
